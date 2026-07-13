@@ -21,7 +21,7 @@ permissions:
 
 jobs:
   dco:
-    uses: splrad/steward/.github/workflows/dco-advisory.yml@dba9ee2ccd445b26e5889da91efdccb903d3b313
+    uses: splrad/steward/.github/workflows/dco-advisory.yml@b0f2146e4938b54bea440c92f2139d11d5b37016
     with:
       app_client_id: ${{ vars.WORKFLOW_AUTOMATION_APP_CLIENT_ID }}
       pr_number: ${{ github.event.pull_request.number || fromJSON(github.event.inputs.pr_number || '0') }}
