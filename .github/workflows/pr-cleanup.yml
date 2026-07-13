@@ -12,7 +12,7 @@ permissions:
 jobs:
   cleanup:
     if: github.event.pull_request.base.ref == github.event.repository.default_branch
-    uses: splrad/steward/.github/workflows/pr-cleanup.yml@dba9ee2ccd445b26e5889da91efdccb903d3b313
+    uses: splrad/steward/.github/workflows/pr-cleanup.yml@b0f2146e4938b54bea440c92f2139d11d5b37016
     with:
       app_client_id: ${{ vars.WORKFLOW_AUTOMATION_APP_CLIENT_ID }}
       pr_number: ${{ github.event.pull_request.number }}
