@@ -4,8 +4,8 @@ run-name: "PR Automation ${{ github.ref_name }} / ${{ github.event.after }}"
 
 on:
   push:
-    branches:
-      - '**'
+    branches-ignore:
+      - 'steward/init'
 
 permissions:
   contents: read
@@ -16,7 +16,7 @@ jobs:
       github.event.deleted == false &&
       github.ref_name != github.event.repository.default_branch &&
       !endsWith(github.actor, '[bot]')
-    uses: splrad/steward/.github/workflows/pr-automation.yml@f99aa6d1dd0e4d391eeec1282c296a6f020f40ba
+    uses: splrad/steward/.github/workflows/pr-automation.yml@dba9ee2ccd445b26e5889da91efdccb903d3b313
     with:
       app_client_id: ${{ vars.WORKFLOW_AUTOMATION_APP_CLIENT_ID }}
       source_branch: ${{ github.ref_name }}
