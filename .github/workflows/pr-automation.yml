@@ -16,7 +16,7 @@ jobs:
       github.event.deleted == false &&
       github.ref_name != github.event.repository.default_branch &&
       !endsWith(github.actor, '[bot]')
-    uses: splrad/steward/.github/workflows/pr-automation.yml@b0f2146e4938b54bea440c92f2139d11d5b37016
+    uses: splrad/steward/.github/workflows/pr-automation.yml@4c59d2d2f1dd89c812219e9782757b63a8f6ac56
     with:
       app_client_id: ${{ vars.WORKFLOW_AUTOMATION_APP_CLIENT_ID }}
       source_branch: ${{ github.ref_name }}

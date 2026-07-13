@@ -18,7 +18,7 @@ permissions:
 jobs:
   release:
     if: ${{ github.event_name == 'workflow_dispatch' || github.event.pull_request.merged == true }}
-    uses: splrad/steward/.github/workflows/release.yml@b0f2146e4938b54bea440c92f2139d11d5b37016
+    uses: splrad/steward/.github/workflows/release.yml@4c59d2d2f1dd89c812219e9782757b63a8f6ac56
     with:
       app_client_id: ${{ vars.WORKFLOW_AUTOMATION_APP_CLIENT_ID }}
       pr_number: ${{ github.event.pull_request.number || fromJSON(github.event.inputs.pr_number || '0') }}
