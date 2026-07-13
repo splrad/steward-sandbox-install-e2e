@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/splrad/steward/b0f2146e4938b54bea440c92f2139d11d5b37016/schema/steward.schema.json",
+  "$schema": "https://raw.githubusercontent.com/splrad/steward/4c59d2d2f1dd89c812219e9782757b63a8f6ac56/schema/steward.schema.json",
   "automation": {
     "githubApp": {
       "clientId": "Iv23liuSr0qd4WLJdZhH",
